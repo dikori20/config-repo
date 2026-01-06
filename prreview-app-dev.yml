@@ -6,7 +6,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/prreviewdb
     username: ${db.username}
-    password: ${db.username}
+    password: ${db.password}
     
   ai:
     ollama:
