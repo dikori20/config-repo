@@ -1,1 +1,15 @@
+spring:
+  application:
+    name: prreviewapp
 
+# Map credentials from Vault
+  datasource:
+    url: jdbc:mysql://localhost:3306/prreviewdb
+    username: ${db.username}
+    password: ${db.username}
+    
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: llama3.2:3b
