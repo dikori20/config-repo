@@ -8,23 +8,7 @@ spring:
     username: ${spring.cloud.vault.kv.prreviewapp.db.username}
     password: ${spring.cloud.vault.kv.prreviewapp.db.password}
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-
-  cloud:
-    vault:
-      uri: http://localhost:8200
-      token: root
-      kv:
-        enabled: true
-        backend: secret
-        application-name: prreviewapp
-
+  
 logging:
   level:
     root: INFO
