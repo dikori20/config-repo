@@ -1,9 +1,19 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/prreviewdb
-    username: ${vault.db.username}
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
     password: ${vault.db.password}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
 
 logging:
   level:
     root: INFO
+
+app:
+  source: git-config-loaded
