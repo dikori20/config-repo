@@ -1,8 +1,33 @@
 spring:
+  application:
+    name: prreviewapp
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/prreview
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${spring.cloud.vault.kv.prreviewapp.db.username}
+    password: ${spring.cloud.vault.kv.prreviewapp.db.password}
+
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  cloud:
+    vault:
+      uri: http://localhost:8200
+      token: root
+      kv:
+        enabled: true
+        backend: secret
+        application-name: prreviewapp
 
 logging:
   level:
     root: INFO
+
+app:
+  source: git-config-loaded
