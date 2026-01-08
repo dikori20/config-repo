@@ -2,7 +2,7 @@ spring:
   application:
     name: prreviewapp
   datasource:
-    url: jdbc:mysql://localhost:3306/prreview
+    url: jdbc:mysql://localhost:3306/prreviewdb
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${spring.cloud.vault.kv.prreviewapp.db.username}
     password: ${spring.cloud.vault.kv.prreviewapp.db.password}
