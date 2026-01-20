@@ -4,8 +4,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/prreviewdb
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${spring.cloud.vault.kv.prreviewapp.db.username}
-    password: ${spring.cloud.vault.kv.prreviewapp.db.password}
+    username: ${db.username}
+    password: ${db.password}
 logging:
   level:
     root: INFO
