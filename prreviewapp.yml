@@ -1,13 +1,19 @@
 spring:
   application:
     name: prreviewapp
+
   datasource:
-    url: jdbc:mysql://localhost:3306/prreviewdb
+    url: jdbc:mysql://localhost:3306/prreviewdb   # keep (Spring tools, clarity)
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: ${db.username}
     password: ${db.password}
+
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3306/prreviewdb
+
 logging:
   level:
-    root: INFO
+    com.zaxxer.hikari: DEBUG
+
 app:
   source: git-config-loaded
